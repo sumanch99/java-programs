@@ -1,0 +1,23 @@
+import java.applet.*;
+import java.awt.*;
+
+public class Applet2 extends Applet
+{
+	/*public void init()
+	{
+		resize(500,500);
+	}*/
+	int x,y,w,h;
+	public void init()
+	{
+		x=Integer.parseInt(getParameter("xValue"));
+		y=Integer.parseInt(getParameter("yValue"));
+		w=Integer.parseInt(getParameter("wValue"));
+		h=Integer.parseInt(getParameter("hValue"));
+	}
+	public void paint(Graphics g)
+	{
+		g.drawRect(x,y,w,h);
+		g.drawString("This is a\n Rectangle!",30,190);
+	}
+}
